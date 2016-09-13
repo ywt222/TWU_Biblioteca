@@ -25,11 +25,15 @@ public class BookListTest {
     }
 
     @Test
-    public void checkoutBookSuccessTest() {
+    public void checkoutAndCheckinBookSuccessTest() {
         String checkoutSuccessResponse ="Thank you! Enjoy the book.";
+        String checkinSuccessResponse ="Thank you for returning the book.";
 
         assertEquals(checkoutSuccessResponse, bookList.checkoutBook(2));
         assertEquals(partBookList, bookList.getBookList());
+
+        assertEquals(checkinSuccessResponse, bookList.checkinBook(2));
+        assertEquals(allBookList, bookList.getBookList());
     }
 
     @Test

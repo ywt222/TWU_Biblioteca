@@ -2,7 +2,6 @@ package com.twu.biblioteca;
 
 public class BookList {
     private Book[] bookList = new Book[6];
-    private String allBookList = "";
 
     public BookList() {
         bookList[0] = new Book("Twilight", "Stephanie Meyer", "2005");
@@ -13,6 +12,7 @@ public class BookList {
     }
 
     public String getBookList() {
+        String allBookList = "";
         for (int i = 0; i < 5; i++) {
             if (!bookList[i].getIsCheckout()) {
                 allBookList = allBookList + (i + 1) + ". " + bookList[i].displayDetail();

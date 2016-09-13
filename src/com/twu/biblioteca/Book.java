@@ -12,18 +12,6 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getYearPublished() {
-        return yearPublished;
-    }
-
     public boolean getIsCheckout() {
         return isCheckout;
     }
