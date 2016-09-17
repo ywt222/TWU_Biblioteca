@@ -9,8 +9,10 @@ public class BibliotecaApp {
 
         System.out.println(bibliotecaApp.welcome());
         System.out.println(bibliotecaApp.logIn());
-        System.out.println(bibliotecaApp.addMenuList());
-        bibliotecaApp.selectMenuList();
+        if (!bibliotecaApp.logIn().equals("Login wrong!")) {
+            System.out.println(bibliotecaApp.addMenuList());
+            bibliotecaApp.selectMenuList();
+        }
     }
 
     public String welcome() {
