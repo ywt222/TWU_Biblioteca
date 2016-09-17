@@ -20,9 +20,10 @@ public class Menu {
 
     public void selectMenu() {
         BookList bookList = new BookList();
+        MovieList movieList = new MovieList();
         Scanner inputId = new Scanner(System.in);
         int menuId = 0;
-        int booId;
+        int itemId;
         while (menuId != 10) {
             System.out.println("Input the menu id you want to select!");
             menuId = inputId.nextInt();
@@ -32,13 +33,26 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Input the book id you want to checkout!");
-                    booId = inputId.nextInt();
-                    System.out.println(bookList.checkoutBook(booId));
+                    itemId = inputId.nextInt();
+                    System.out.println(bookList.checkoutBook(itemId));
                     break;
                 case 3:
                     System.out.println("Input the book id you want to checkin!");
-                    booId = inputId.nextInt();
-                    System.out.println(bookList.checkinBook(booId));
+                    itemId = inputId.nextInt();
+                    System.out.println(bookList.checkinBook(itemId));
+                    break;
+                case 4:
+                    System.out.println(movieList.getMovieList());
+                    break;
+                case 5:
+                    System.out.println("Input the movie id you want to checkout!");
+                    itemId = inputId.nextInt();
+                    System.out.println(movieList.checkoutMovie(itemId));
+                    break;
+                case 6:
+                    System.out.println("Input the movie id you want to checkin!");
+                    itemId = inputId.nextInt();
+                    System.out.println(movieList.checkinMovie(itemId));
                     break;
                 case 10:
                     System.out.println("You are quit, see you!");

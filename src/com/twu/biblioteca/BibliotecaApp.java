@@ -19,6 +19,9 @@ public class BibliotecaApp {
         menu.addMenu("List Books");
         menu.addMenu("Checkout Books");
         menu.addMenu("Checkin Books");
+        menu.addMenu("List Movies");
+        menu.addMenu("Checkout Movies");
+        menu.addMenu("Checkin Movies");
         return menu.displayMenuList();
     }
 

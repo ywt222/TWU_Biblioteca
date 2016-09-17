@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
 public class BookList {
-    private Book[] bookList = new Book[6];
+    private Book[] bookList = new Book[5];
 
     public BookList() {
         bookList[0] = new Book("Twilight", "Stephanie Meyer", "2005");

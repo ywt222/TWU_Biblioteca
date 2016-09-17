@@ -15,7 +15,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void addMenuListTest() {
-        String menuList = "1. List Books\n" + "2. Checkout Books\n" + "3. Checkin Books\n";
+        String menuList = "1. List Books\n" + "2. Checkout Books\n" + "3. Checkin Books\n" + "4. List Movies\n" + "5. Checkout Movies\n" + "6. Checkin Movies\n";
         assertEquals(menuList, bibliotecaApp.addMenuList());
     }
 }
