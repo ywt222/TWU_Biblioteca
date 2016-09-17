@@ -1,29 +1,17 @@
 package com.twu.biblioteca;
 
-public class Movie {
-    private String name;
-    private String year;
-    private String director;
+public class Movie extends Information {
     private double movieRating;
-    private boolean isCheckout = false;
 
-    public Movie(String name, String year, String director, double movieRating) {
+    public Movie(String name, String year, String author, double movieRating) {
         this.name = name;
         this.year = year;
-        this.director = director;
+        this.author = author;
         this.movieRating = movieRating;
     }
 
-    public boolean getIsCheckout() {
-        return isCheckout;
-    }
-
-    public void setIsCheckout(boolean isCheckout) {
-        this.isCheckout = isCheckout;
-    }
-
     public String displayDetail() {
-        String detail = this.name + "    " + this.year + "    " + this.director + "    " + this.movieRating + "\n";
+        String detail = this.name + "    " + this.year + "    " + this.author + "    " + this.movieRating + "\n";
         return detail;
     }
 }
