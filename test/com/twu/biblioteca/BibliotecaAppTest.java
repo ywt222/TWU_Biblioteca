@@ -9,7 +9,8 @@ public class BibliotecaAppTest {
 
     @Test
     public void welcomeTest() {
-        String welcomeMessage = "Hi, Welcome to Bangalore Public Library!";
+        String welcomeMessage = "Hi, Welcome to Bangalore Public Library!\n" +
+                "Please input libraryNumber and password to log in!";
         assertEquals(welcomeMessage, bibliotecaApp.welcome());
     }
 

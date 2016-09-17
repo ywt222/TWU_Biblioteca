@@ -9,13 +9,13 @@ public class UserListTest {
 
     @Test
     public void loginSuccessTest() {
-        boolean loginStatus = userList.login("002-2112", "345678");
-        assertEquals(true, loginStatus);
+        String information = "Steve    456@email.com    12345677\n";
+        assertEquals(information, userList.login("002-2112", "345678"));
     }
 
     @Test
     public void loginFailedTest() {
-        boolean loginStatus = userList.login("002-2112", "445678");
-        assertEquals(false, loginStatus);
+        String information = "Login wrong!";
+        assertEquals(information, userList.login("002-2112", "445678"));
     }
 }

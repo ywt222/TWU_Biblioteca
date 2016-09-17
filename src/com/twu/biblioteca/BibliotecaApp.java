@@ -1,17 +1,29 @@
 package com.twu.biblioteca;
 
+import java.util.Scanner;
+
 public class BibliotecaApp {
 
     public static void main(String[] args) {
         BibliotecaApp bibliotecaApp = new BibliotecaApp();
 
         System.out.println(bibliotecaApp.welcome());
+        System.out.println(bibliotecaApp.logIn());
         System.out.println(bibliotecaApp.addMenuList());
         bibliotecaApp.selectMenuList();
     }
 
     public String welcome() {
-        return "Hi, Welcome to Bangalore Public Library!";
+        return "Hi, Welcome to Bangalore Public Library!\n" +
+                "Please input libraryNumber and password to log in!";
+    }
+
+    public String logIn() {
+        UserList userList = new UserList();
+        Scanner input = new Scanner(System.in);
+        String libraryNumber = input.next();
+        String password = input.next();
+        return userList.login(libraryNumber, password);
     }
 
     public String addMenuList() {

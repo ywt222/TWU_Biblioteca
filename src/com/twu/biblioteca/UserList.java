@@ -11,13 +11,13 @@ public class UserList {
         userList[4] = new User("001-4567", "567890", "Lily", "789@email.com", "12345699");
     }
 
-    public boolean login(String libraryNumber, String password) {
+    public String login(String libraryNumber, String password) {
         for (int i = 0; i < 5; i++) {
-            if ((userList[i].getLibraryNumber() == libraryNumber) && (userList[i].getPassword() == password)) {
+            if ((userList[i].getLibraryNumber().equals(libraryNumber)) && (userList[i].getPassword().equals(password))) {
                 userList[i].setIsLogin(true);
-                return true;
+                return userList[i].getName() + "    " + userList[i].getEmail() + "    " + userList[i].getPhone() + "\n";
             }
         }
-        return false;
+        return "Login wrong!";
     }
 }

@@ -18,6 +18,21 @@ public class UserTest {
     }
 
     @Test
+    public void getNameTest() {
+        assertEquals("ywt", user.getName());
+    }
+
+    @Test
+    public void getEmailTest() {
+        assertEquals("ywt@email.com", user.getEmail());
+    }
+
+    @Test
+    public void getPhoneTest() {
+        assertEquals("1234567", user.getPhone());
+    }
+
+    @Test
     public void getIsLoginTest() {
         assertEquals(false, user.getIsLogin());
     }
@@ -26,11 +41,5 @@ public class UserTest {
     public void setIsLoginTest() {
         user.setIsLogin(true);
         assertEquals(true, user.getIsLogin());
-    }
-
-    @Test
-    public void showInformationTest() {
-        String information = "ywt    ywt@email.com    1234567\n";
-        assertEquals(information, user.showInformation());
     }
 }

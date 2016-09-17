@@ -24,15 +24,23 @@ public class User {
         return password;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
     public boolean getIsLogin() {
         return isLogin;
     }
 
     public void setIsLogin(boolean isLogin) {
         this.isLogin = isLogin;
-    }
-
-    public String showInformation() {
-        return this.name + "    " + this.email + "    " + this.phone + "\n";
     }
 }
