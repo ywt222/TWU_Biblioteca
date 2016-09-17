@@ -21,9 +21,20 @@ public class BookList {
         return allBookList;
     }
 
-    public String checkoutBook(int id) {
+    public String getAdminBookList() {
+        String allBookList = "";
+        for (int i = 0; i < 5; i++) {
+            if (bookList[i].getIsCheckout()) {
+                allBookList = allBookList + (i + 1) + ". " + bookList[i].displayDetail() + "lend by " + bookList[i].getLendBy();
+            }
+        }
+        return allBookList;
+    }
+
+    public String checkoutBook(int id, String name) {
         if ((id - 1) < 5 && !bookList[id - 1].getIsCheckout()) {
             bookList[id - 1].setIsCheckout(true);
+            bookList[id - 1].setLendBy(name);
             return "Thank you! Enjoy the book.";
         } else {
             return "That book is not available.";

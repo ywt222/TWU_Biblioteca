@@ -36,6 +36,7 @@ public class BibliotecaApp {
         menu.addMenu("List Movies");
         menu.addMenu("Checkout Movies");
         menu.addMenu("Checkin Movies");
+        menu.addMenu("Admin");
         return menu.displayMenuList();
     }
 

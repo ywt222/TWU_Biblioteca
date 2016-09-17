@@ -43,4 +43,9 @@ public class User {
     public void setIsLogin(boolean isLogin) {
         this.isLogin = isLogin;
     }
+
+    public void checkoutBook(int id) {
+        BookList bookList = new BookList();
+        bookList.checkoutBook(id, this.name);
+    }
 }

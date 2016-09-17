@@ -34,7 +34,8 @@ public class Menu {
                 case 2:
                     System.out.println("Input the book id you want to checkout!");
                     itemId = inputId.nextInt();
-                    System.out.println(bookList.checkoutBook(itemId));
+                    String name = inputId.next();
+                    System.out.println(bookList.checkoutBook(itemId, name));
                     break;
                 case 3:
                     System.out.println("Input the book id you want to checkin!");
@@ -53,6 +54,15 @@ public class Menu {
                     System.out.println("Input the movie id you want to checkin!");
                     itemId = inputId.nextInt();
                     System.out.println(movieList.checkinMovie(itemId));
+                    break;
+                case 7:
+                    System.out.println("Input admin id and password to ensure you are admin.");
+                    Admin admin=new Admin();
+                    String id = inputId.next();
+                    String password = inputId.next();
+                    if ((admin.getId().equals(id)) && (admin.getPassword().equals(password))) {
+                        System.out.println(admin.showCheckoutBooks());
+                    }
                     break;
                 case 10:
                     System.out.println("You are quit, see you!");
